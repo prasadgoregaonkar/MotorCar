@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>Bolt IoT Platform</title>
+        <script type="text/javascript" src="https://cloud.boltiot.com/static/js/boltCommands.js"></script>
+        <script>
+        setKey('{{ApiKey}}','{{Name}}');
+        </script>
+	<style>
+		body
+		{
+		background-position: center;
+		background-color: #85C1E9;
+		}
+		.button
+		{
+		border: none;
+		color: white;
+		text-align: center;
+		}
+
+    </style>
+    <script>
+  function Forward() {
+  digitalWrite('1','HIGH');
+  digitalWrite('2','LOW');
+  digitalWrite('3','HIGH');
+  digitalWrite('4','LOW');
+  }
+  function Reverse() {
+  digitalWrite('1','LOW');
+  digitalWrite('2','HIGH');
+  digitalWrite('3','LOW');
+  digitalWrite('4','HIGH');
+  }
+   function Right() {
+  digitalWrite('1','HIGH');
+  digitalWrite('2','LOW');
+  digitalWrite('3','LOW');
+  digitalWrite('4','LOW');
+  }
+   function Left() {
+  digitalWrite('1','LOW');
+  digitalWrite('2','LOW');
+  digitalWrite('3','HIGH');
+  digitalWrite('4','LOW');
+  }
+   function Stop() {
+  digitalWrite('1','LOW');
+  digitalWrite('2','LOW');
+  digitalWrite('3','LOW');
+  digitalWrite('4','LOW');
+  }
+  </script>
+    </head>
+  <body>
+    <center>
+		<h2 style="color:#2C3E50"><u>HOME AUTOMATION USING IOT</u></h2><br>
+		<h3 style="color:#5B2C6F" ><u>LIGHT</u></h3>
+        <button style="width: 80px; height: 40px ; background-color:#2ECC71 ; color:white ;" onclick="Forward()">FORWARD</button>
+        <button style="width: 80px; height: 40px ; background-color:#E74C3C; color:white ;" onclick="Reverse();">REVERSE</button><BR>
+        <button style="width: 80px; height: 40px ; background-color:#2ECC71 ; color:white ;" onclick="Right();">RIGHT</button>
+        <button style="width: 80px; height: 40px ; background-color:#E74C3C; color:white ;" onclick="Left();">LEFT</button><br>
+        <button style="width: 80px; height: 40px ; background-color:#E74C3C; color:white ;" onclick="Stop();">STOP</button>
+    </center>
+   </body>
+</html>
